@@ -1,6 +1,7 @@
 <?php
-include 'connect.php';
+include 'connect.php'; // Call file connected with database
 
+/*=============== insert data in database ===================*/
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $type = $_POST['type'];

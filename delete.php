@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include 'connect.php'; // Call file connected with database
 
 $id = $_GET['id'];
 if (isset($_POST['delete'])) {
