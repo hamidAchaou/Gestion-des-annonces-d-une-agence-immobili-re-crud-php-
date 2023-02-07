@@ -67,7 +67,7 @@ include 'insert.php'; // Call the file that adds the data to the database
           </div>
           <button type="submit" name="serchbtn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#addAnnonce" id="btn-add">Add annonces</button>
 
-          <!--=====================================  ADD ANNONCE =====================-->
+          <!--=====================================  ADD ANNONCE  =====================-->
           <!-- button ADD ANNONCE -->
           <!-- Modal add -->
           <div id="addAnnonce" class="modal fade" role="dialog">
@@ -85,7 +85,7 @@ include 'insert.php'; // Call the file that adds the data to the database
                         </label>
                         <label for = "completeType" class = "w-100">type:
                             <select id="completeType" name = "type">
-                                <option value="Vent">Vent</option> 
+                                <option value="Vent">Rent</option> 
                                 <option value="Sale">Sale</option> 
                             </select>
                         </label>
@@ -257,14 +257,11 @@ include 'insert.php'; // Call the file that adds the data to the database
       </section>
     </main>
 
-    <!--========================  Footer ======================================-->
-    <footer class="text-center text-lg-start text-muted bg-light">
+  <!--========================  Footer ======================================-->
+    <footer class="text-center text-lg-start text-muted bg-light mt-5">
       <!-- Section: Social media -->
-      <div class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <div class="d-flex justify-content-center p-4 border-bottom">
           <!-- Left -->
-          <div class="me-5 d-none d-lg-block">
-          <span>social networks:</span>
-          </div>
           <div>
           <a href="" class="me-4 link-secondary">
               <i class="fab fa-facebook-f"></i>
