@@ -154,6 +154,9 @@ include 'insert.php'; // Call the file that adds the data to the database
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit<?php echo $value["id"] ?>">
                         EDIT
                     </button> 
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#MoreInfo<?php echo $value["id"] ?>">
+                        More infor
+                    </button> 
                   </form>
                 </div>
         </div>
@@ -181,6 +184,40 @@ include 'insert.php'; // Call the file that adds the data to the database
               </div>
             </div>
         </div>
+
+
+          <!-- MODAL FOR MOR INFO -->
+         <div class="modal fade" id="MoreInfo<?php echo $value["id"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"><?php echo $value['title'] ?></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <form action="delete.php?id=<?php echo $value['id'] ?>" method="post">
+                <img class="card-img-top" src="<?php echo $value['image'] ?>" alt="Card image cap" height="250">
+                <p class="card-text fw-bold"> price:<?php echo $value['price'] ?>$</p>
+                <p class="card-text fw-bold"><small class="text-muted">space:<?php echo $value['space'] ?> m</small></p>
+
+                 <p class="card-text fw-bold"><small class="text-muted">location/<?php echo $value['location'] ?> m</small></p>
+                  <p class="card-text fw-bold">type:<?php echo $value['type'] ?></p>
+                  <p class="card-text fw-bold">discription:<?php echo $value['discription'] ?></p>
+                  <p class="card-text fw-bold">date:<?php echo $value['date'] ?></p>
+                
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button class="btn btn-danger" name="delete">Delete</button> -->
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+
         <!-- MODAL Edit -->
         <div class="modal fade" id="edit<?php echo $value["id"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -283,9 +320,7 @@ include 'insert.php'; // Call the file that adds the data to the database
           </a>
           </div>
       </div>
-      <div class="">
-          <div class="container text-center text-md-start mt-5">
-      </div>
+
       <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
           © 2021 Copyright:
           <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
